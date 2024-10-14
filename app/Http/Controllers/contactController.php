@@ -70,19 +70,19 @@ class contactController extends Controller
         // $subject = strtolower($request->subject);
         // switch ($subject) {
         //     case 'support inquiry':
-        //         $recipients = ['sysadmin@smsglobal.net'];
+        //         $recipients = ['support@medsol.technology'];
         //         break;
         //     case 'general inquiry':
-        //         $recipients = ['info@smsglobal.net'];
+        //         $recipients = ['info@medsol.technology'];
         //         break;
         //     case 'sales inquiry':
-        //         $recipients = ['order@smsglobal.net'];
+        //         $recipients = ['info@medsol.technology'];
         //         break;
         //     case 'partnership inquiry':
-        //         $recipients = ['andreheggem@smsglobal.net', 'wilfred@smsglobal.net'];
+        //         $recipients = ['info@medsol.technology'];
         //         break;
         //     default:
-        //         $recipients = ['info@smsglobal.net'];
+        //         $recipients = ['info@medsol.technology'];
         //         break;
         // }
 
