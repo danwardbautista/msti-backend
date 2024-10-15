@@ -48,43 +48,43 @@ class contactController extends Controller
             ], 400);
         }
 
-        $subject = strtolower($request->subject);
-        switch ($subject) {
-            case 'support inquiry':
-                $recipients = ['dan@smsglobal.net','danwardbautista@gmail.com'];
-                break;
-            case 'general inquiry':
-                $recipients = ['danwarddeveloper@gmail.com'];
-                break;
-            case 'sales inquiry':
-                $recipients = ['danwardbautista@gmail.com'];
-                break;
-            case 'partnership inquiry':
-                $recipients = ['baron@smsglobal.net'];
-                break;
-            default:
-                $recipients = ['baron@smsglobal.net'];
-                break;
-        }
-
         // $subject = strtolower($request->subject);
         // switch ($subject) {
         //     case 'support inquiry':
-        //         $recipients = ['support@medsol.technology'];
+        //         $recipients = ['dan@smsglobal.net','danwardbautista@gmail.com'];
         //         break;
         //     case 'general inquiry':
-        //         $recipients = ['info@medsol.technology'];
+        //         $recipients = ['danwarddeveloper@gmail.com'];
         //         break;
         //     case 'sales inquiry':
-        //         $recipients = ['info@medsol.technology'];
+        //         $recipients = ['danwardbautista@gmail.com'];
         //         break;
         //     case 'partnership inquiry':
-        //         $recipients = ['info@medsol.technology'];
+        //         $recipients = ['baron@smsglobal.net'];
         //         break;
         //     default:
-        //         $recipients = ['info@medsol.technology'];
+        //         $recipients = ['baron@smsglobal.net'];
         //         break;
         // }
+
+        $subject = strtolower($request->subject);
+        switch ($subject) {
+            case 'support inquiry':
+                $recipients = ['support@medsol.technology'];
+                break;
+            case 'general inquiry':
+                $recipients = ['info@medsol.technology'];
+                break;
+            case 'sales inquiry':
+                $recipients = ['info@medsol.technology'];
+                break;
+            case 'partnership inquiry':
+                $recipients = ['info@medsol.technology'];
+                break;
+            default:
+                $recipients = ['info@medsol.technology'];
+                break;
+        }
 
         $contact = contactModel::create([
             'name' => $request->name,
