@@ -6,7 +6,7 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class ContactMail extends Mailable
+class ContactMailCopy extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -31,9 +31,9 @@ class ContactMail extends Mailable
      */
     public function build()
     {
-        return $this->subject($this->subject)
-                    ->replyTo($this->contact['email']) // Set the Reply-To address
-                    ->from('no-reply@medsol.technology', $this->contact['name'])
-                    ->markdown('emails.contact');
+        return $this->subject('We received your inquiry: ' . $this->subject)
+                    // ->replyTo('support@medsol.technology')
+                    ->from('no-reply@medsol.technology', 'Medsol Support Team')
+                    ->markdown('emails.contact_copy');
     }
 }

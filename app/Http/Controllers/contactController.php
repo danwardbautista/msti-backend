@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Http;
 use App\Mail\ContactMail;
+use App\Mail\ContactMailCopy;
 use Exception;
 
 
@@ -101,6 +102,8 @@ class contactController extends Controller
 
         try {
             Mail::to($recipients)->send(new ContactMail($contact->toArray(), $request->subject));
+
+            Mail::to($request->email)->send(new ContactMailCopy($contact->toArray(), $request->subject));
 
             return response([
                 'message' => "Contact email sent successfully",
