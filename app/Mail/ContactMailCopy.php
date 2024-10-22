@@ -31,9 +31,9 @@ class ContactMailCopy extends Mailable
      */
     public function build()
     {
-        return $this->subject('We received your inquiry: ' . $this->subject)
+        return $this->subject('We Received Your ' . $this->subject)
                     // ->replyTo('support@medsol.technology')
-                    ->from('no-reply@medsol.technology', 'Medsol Support Team')
+                    ->from('no-reply@medsol.technology', 'MedicalSolution Technology')
                     ->markdown('emails.contact_copy');
     }
 }
