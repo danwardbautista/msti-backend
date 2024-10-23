@@ -77,7 +77,7 @@ class contactController extends Controller
                 $recipients = ['info@medsol.technology'];
                 break;
             case 'sales inquiry':
-                $recipients = ['info@medsol.technology'];
+                $recipients = ['sales@medsol.technology'];
                 break;
             case 'partnership inquiry':
                 $recipients = ['info@medsol.technology'];
