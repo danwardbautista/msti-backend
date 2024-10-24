@@ -34,6 +34,7 @@ class ContactMail extends Mailable
         return $this->subject($this->subject)
                     ->replyTo($this->contact['email']) // Set the Reply-To address
                     ->from('no-reply@medsol.technology', $this->contact['name'])
+                    ->bcc('wvcasumbal@medsol.technology') 
                     ->markdown('emails.contact');
     }
 }
